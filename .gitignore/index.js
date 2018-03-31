@@ -89,12 +89,12 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "PUB") {
-        message.reply("Youtube : https://goo.gl/RQZ6ZA
-Instagram : https://goo.gl/Jex2aU
-Facebook groupe : https://goo.gl/1Co2hL
-Twitch : https://goo.gl/yLkmpL
-Snapchat : https://goo.gl/c1QtT9
-Discord : https://goo.gl/jNBq2A
+        message.reply("Youtube : 
+Instagram : 
+Facebook 
+Twitch : 
+Snapchat : 
+Discord : 
 TeamSpeak : ts.speed-ts.fr:12677
 Sponsor / Pub : salihketur60@hotmail.fr");
     }
