@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const YTDL = require("ytdl-core");
 
-const TOKEN = "NDE4OTE1MzQ0NTQ0MTY5OTk0.DaF_HQ.OgUwyRn4B-IZFH-C7CN1xETzP9U";
+const TOKEN = "NDI5NzQwMzAxMDQxNzk1MDg2.DaGCbQ.mVHyiW7E2homU1lOLwMYBBvRVtI";
 const PREFIX = "-";
 
 function generatoHex() {
