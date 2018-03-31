@@ -89,14 +89,7 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "PUB") {
-        message.reply("Youtube : 
-Instagram : 
-Facebook 
-Twitch : 
-Snapchat : 
-Discord : 
-TeamSpeak : ts.speed-ts.fr:12677
-Sponsor / Pub : salihketur60@hotmail.fr");
+        message.reply("Youtube");
     }
 });
 
