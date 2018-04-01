@@ -141,6 +141,14 @@ bot.on("message", function(message) {
     }
 });
 
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (message.content == "régle") {
+        message.reply("Les demandes de votre part: 1. Moins la malédiction, plus nous sommes heureux. 2.Faites vos repères en particulier. 3.Faites vos repères en particulier. 4. Toute annonce de chaîne ou de discord est interdit. 5. Le partage sexuel, de sang, de sauvagerie est interdit. 6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits. 7. La religion, la langue, la race et la politique sont strictement interdites. 8. Les spams et les inondations sont interdits.");
+    }
+});
+
 bot.on("ready", function() {
     console.log("Ready");
 });
