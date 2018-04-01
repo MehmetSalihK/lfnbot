@@ -89,7 +89,7 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "PUB") {
-        message.reply("Discord : https://goo.gl/jNBq2A");
+        message.reply("Youtube : https://goo.gl/RQZ6ZA Instagram : https://goo.gl/Jex2aU Snapchat : https://goo.gl/c1QtT9 Twitch : https://goo.gl/yLkmpL Facebook Groupe : https://goo.gl/1Co2hL Discord : https://goo.gl/jNBq2A LFN TeamSpeak : ts.speed-ts.fr:12677");
     }
 });
 
