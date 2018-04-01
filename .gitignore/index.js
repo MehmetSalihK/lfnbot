@@ -89,7 +89,7 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "PUB") {
-        message.reply("Youtube");
+        message.reply("Discord : https://goo.gl/jNBq2A");
     }
 });
 
