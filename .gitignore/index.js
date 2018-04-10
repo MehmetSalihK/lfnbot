@@ -1,7 +1,8 @@
 const Discord = require("discord.js");
 const YTDL = require("ytdl-core");
+const client = new Discord.Client();
 
-const TOKEN = "NDI5NzQ1ODg4MTUyNTE4Njcx.DaGHkg.BFfzOI_bYQayBYXFEiRFnXVhYaM";
+const TOKEN = "NDI5NzQ1ODg4MTUyNTE4Njcx.Da5_fA.GloqYSvp908GXceRGmgfxBqRh64";
 const PREFIX = "-";
 
 function generatoHex() {
@@ -30,7 +31,7 @@ var fortunes = [
 
 var bot = new Discord.Client();
 
-var server = {};
+var servers = {};
 
 bot.on("ready", function() {
     bot.user.setGame("LfNBoT, !help");
@@ -41,7 +42,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "Salut") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -49,7 +51,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "salut") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -57,7 +60,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "Wesh") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -65,7 +69,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "wesh") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -73,7 +78,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "Wsh") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -81,23 +87,47 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "wsh") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "PUB") {
-        message.reply("Youtube : https://goo.gl/RQZ6ZA Instagram : https://goo.gl/Jex2aU Snapchat : https://goo.gl/c1QtT9 Twitch : https://goo.gl/yLkmpL Facebook Groupe : https://goo.gl/1Co2hL Discord : https://goo.gl/jNBq2A LFN TeamSpeak : ts.speed-ts.fr:12677");
-    }
+bot.on("message", (message) => {
+	
+	/*
+		Object message :
+		
+		- mentions.users = utilisateurs mentionnés
+		- author.username = auteur du message
+		- content = contenu du message
+		- createdTimestamp = timestamp du message
+		- member.guild.name = nom du serveur
+		- channel.name = nom du topic
+		- channel.topic = description du topic
+		- channel.guild.roles = rôles sur le serveur
+	*/
+	
+	if(message.content.substring(0, 7) == "-PUB")
+	{
+		var commande = message.content.split(" ");
+		
+		if(typeof commande[1] === 'undefined')
+		{
+			if(message.author.bot === false)
+			{
+				// Nom d'utilisateur pas entré = afficher l'aide
+				message.reply("__***Réseau Sociaux***__ \n\n Youtube : https://goo.gl/RQZ6ZA\nInstagram : https://goo.gl/Jex2aU\nSnapchat : https://goo.gl/c1QtT9\nTwitch : https://goo.gl/yLkmpL\nFacebook Groupe : https://goo.gl/1Co2hL\nDiscord : https://goo.gl/jNBq2A\nLFN TeamSpeak : ts.speed-ts.fr:12677");
+			}
+		}
+	}
 });
 
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "Coucou") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -105,7 +135,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "coucou") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -113,7 +144,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "CC") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -121,7 +153,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "cc") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -129,7 +162,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "welcome") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -137,16 +171,39 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "Welcome") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "régle") {
-        message.reply("Les demandes de votre part: 1. Moins la malédiction, plus nous sommes heureux. 2.Faites vos repères en particulier. 3.Faites vos repères en particulier. 4. Toute annonce de chaîne ou de discord est interdit. 5. Le partage sexuel, de sang, de sauvagerie est interdit. 6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits. 7. La religion, la langue, la race et la politique sont strictement interdites. 8. Les spams et les inondations sont interdits.");
-    }
+bot.on("message", (message) => {
+	
+	/*
+		Object message :
+		
+		- mentions.users = utilisateurs mentionnés
+		- author.username = auteur du message
+		- content = contenu du message
+		- createdTimestamp = timestamp du message
+		- member.guild.name = nom du serveur
+		- channel.name = nom du topic
+		- channel.topic = description du topic
+		- channel.guild.roles = rôles sur le serveur
+	*/
+	
+	if(message.content.substring(0, 7) == "-régle")
+	{
+		var commande = message.content.split(" ");
+		
+		if(typeof commande[1] === 'undefined')
+		{
+			if(message.author.bot === false)
+			{
+				// Nom d'utilisateur pas entré = afficher l'aide
+				message.reply("__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits.");
+			}
+		}
+	}
 });
 
 bot.on("ready", function() {
