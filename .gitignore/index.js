@@ -48,14 +48,6 @@ bot.on("message", function(message) {
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
-    if (message.content == "amk") {
-        message.reply("SUS LAN YARRAM AMCIK");
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
     if (message.content == "salut") {
         message.reply("Welcome To Do LesFamilles NDNG. :)");
     }
@@ -248,7 +240,7 @@ bot.on("message", function(message) {
             var server = servers[message.guild.id];
             break;
         default:
-            message.channel.sendMessage("Commande non valide")
+            message.channel.sendMessage(" ")
     }
 });
     
