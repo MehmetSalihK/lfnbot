@@ -64,7 +64,7 @@ bot.on('ready', () => {
   
               // Logging the number of messages deleted on both the channel and console.
               message.channel.sendMessage("Suppression des messages réussie. Nombre total de messages supprimés: "+messagesDeleted);
-              console.log('Suppression des messages réussie. Nombre total de messages supprimés: '+messagesDeleted).then(d_msg => { d_msg.delete(3000); });
+              console.log('Suppression des messages réussie. Nombre total de messages supprimés: '+messagesDeleted)
             })
             .catch(err => {
               console.log('Erreur lors de la suppression en bloc');
