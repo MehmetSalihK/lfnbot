@@ -164,37 +164,6 @@ bot.on("message", (message) => {
 	}
 });
 
-bot.on("message", (message) => {
-	
-	/*
-		Object message :
-		
-		- mentions.users = utilisateurs mentionnés
-		- author.username = auteur du message
-		- content = contenu du message
-		- createdTimestamp = timestamp du message
-		- member.guild.name = nom du serveur
-		- channel.name = nom du topic
-		- channel.topic = description du topic
-		- channel.guild.roles = rôles sur le serveur
-	*/
-	
-	if(message.content.substring(0, 7) == "-pub")
-		message.delete (30);
-	{
-		var commande = message.content.split(" ");
-		
-		if(typeof commande[1] === 'undefined')
-		{
-			if(message.author.bot === false)
-			{
-				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("__***Réseau Sociaux***__ \n\n Youtube : https://goo.gl/RQZ6ZA\nInstagram : https://goo.gl/Jex2aU\nSnapchat : https://goo.gl/c1QtT9\nTwitch : https://goo.gl/yLkmpL\nFacebook Groupe : https://goo.gl/1Co2hL\nDiscord : https://goo.gl/jNBq2A\nLFN TeamSpeak : ndng.ts3wolf.com").then(d_msg => { d_msg.delete(8990); });
-			}
-		}
-	}
-});
-
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
@@ -275,37 +244,6 @@ bot.on("message", (message) => {
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
 				message.reply("__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits.");
-			}
-		}
-	}
-});
-
-bot.on("message", (message) => {
-	
-	/*
-		Object message :
-		
-		- mentions.users = utilisateurs mentionnés
-		- author.username = auteur du message
-		- content = contenu du message
-		- createdTimestamp = timestamp du message
-		- member.guild.name = nom du serveur
-		- channel.name = nom du topic
-		- channel.topic = description du topic
-		- channel.guild.roles = rôles sur le serveur
-	*/
-	
-	if(message.content.substring(0, 7) == "-regles")
-		message.delete (30);
-	{
-		var commande = message.content.split(" ");
-		
-		if(typeof commande[1] === 'undefined')
-		{
-			if(message.author.bot === false)
-			{
-				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits.").then(d_msg => { d_msg.delete(8990); });
 			}
 		}
 	}
