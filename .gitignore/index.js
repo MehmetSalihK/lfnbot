@@ -33,6 +33,48 @@ var bot = new Discord.Client();
 
 var servers = {};
 
+const CLEAR_MESSAGES = '-clearchat';
+
+bot.on('ready', () => {
+    console.log('Je susi prêt à éffacer les messages!');
+    bot.on('message', message => {
+      if (message.content == CLEAR_MESSAGES) {
+  
+        // Check the following permissions before deleting messages:
+        //    1. Check if the user has enough permissions
+        //    2. Check if I have the permission to execute the command
+  
+        if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
+          message.channel.sendMessage("Désolé, vous n'avez pas la permission d'exécuter la commande \""+message.content+"\"");
+          console.log("Désolé, vous n'avez pas la permission d'exécuter la commande \""+message.content+"\"");
+          return;
+        } else if (!message.channel.permissionsFor(bot.user).hasPermission("MANAGE_MESSAGES")) {
+          message.channel.sendMessage("Désolé, je n'ai pas la permission d'exécuter la commande \""+message.content+"\"");
+          console.log("Désolé, je n'ai pas la permission d'exécuter la commande \""+message.content+"\"");
+          return;
+        }
+  
+        // Only delete messages if the channel type is TextChannel
+        // DO NOT delete messages in DM Channel or Group DM Channel
+        if (message.channel.type == 'text') {
+          message.channel.fetchMessages()
+            .then(messages => {
+              message.channel.bulkDelete(messages);
+              messagesDeleted = messages.array().length; // number of messages deleted
+  
+              // Logging the number of messages deleted on both the channel and console.
+              message.channel.sendMessage("Suppression des messages réussie. Nombre total de messages supprimés: "+messagesDeleted);
+              console.log('Suppression des messages réussie. Nombre total de messages supprimés: '+messagesDeleted)
+            })
+            .catch(err => {
+              console.log('Erreur lors de la suppression en bloc');
+              console.log(err);
+            });
+        }
+      }
+    });
+  });
+
 bot.on("ready", function() {
     bot.user.setGame("LfNBoT, !help");
     console.log("Le bot a bien ete connecte");
