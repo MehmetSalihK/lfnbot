@@ -149,7 +149,7 @@ bot.on("message", (message) => {
 		- channel.guild.roles = rôles sur le serveur
 	*/
 	
-	if(message.content.substring(0, 7) == "-PUB")
+	if(message.content.substring(0, 7) == "-bup")
 	{
 		var commande = message.content.split(" ");
 		
@@ -295,7 +295,7 @@ bot.on("message", (message) => {
 		- channel.guild.roles = rôles sur le serveur
 	*/
 	
-	if(message.content.substring(0, 7) == "-regle")
+	if(message.content.substring(0, 7) == "-regles")
 		message.delete (30);
 	{
 		var commande = message.content.split(" ");
