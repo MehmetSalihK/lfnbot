@@ -337,7 +337,7 @@ bot.on("message", function(message) {
 
     switch (args[0].toLowerCase()) {
         case "ping":
-            message.channel.sendMessage("Pong!")
+            message.channel.sendMessage("Pong!").then(d_msg => { d_msg.delete(30); });
             break;
         case "info":
             message.channel.sendMessage("Je suis une super drop non créée par moi");
