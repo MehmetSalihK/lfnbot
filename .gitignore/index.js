@@ -181,6 +181,7 @@ bot.on("message", (message) => {
 	
 	if(message.content.substring(0, 7) == "-bup")
 	{
+		message.delete (30);
 		var commande = message.content.split(" ");
 		
 		if(typeof commande[1] === 'undefined')
