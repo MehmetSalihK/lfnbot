@@ -234,7 +234,6 @@ bot.on("message", (message) => {
 	*/
 	
 	if(message.content.substring(0, 7) == "-régle")
-		message.delete (30);
 	{
 		var commande = message.content.split(" ");
 		
