@@ -1,11 +1,6 @@
 const Discord = require("discord.js");
 const YTDL = require("ytdl-core");
 const client = new Discord.Client();
-const newUsers = new Discord.Collection();
-const stream = require('stream');
-const client = new Discord.Client();
-
-var mysql = require('mysql');
 
 const TOKEN = "NDI5NzQ1ODg4MTUyNTE4Njcx.Da5_fA.GloqYSvp908GXceRGmgfxBqRh64";
 const PREFIX = "-";
