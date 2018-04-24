@@ -80,6 +80,13 @@ bot.on("ready", function() {
     console.log("Le bot a bien ete connecte");
 });
 
+bot.on('guildMemberAdd', function (member) {
+	member.createDM().then(function (channel) {
+			return channel.send('Bienvenue sur le channel ! ' + member.displayName)
+
+	}).catch(console.error)
+})
+
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
