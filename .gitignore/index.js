@@ -75,10 +75,12 @@ bot.on('ready', () => {
     });
   });
 
-bot.on("ready", function() {
-    bot.user.setGame("LfNBoT, !help");
-    console.log("Le bot a bien ete connecte");
-});
+bot.on("ready", async () => {
+
+	console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+	bot.user.setActivity("NDNG - Mehmet60", {type: "WATCHING"});
+  
+  });
 
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
