@@ -96,13 +96,6 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on('guildMemberAdd', function (member) {
-    member.createDM().then(function (channel) {
-        return channel.send('__***:heavy_check_mark::red_circle:BIENVENUE:red_circle::heavy_check_mark:***__' + member.displayName)
- 
-    }).catch(console.error)
-})
-
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
