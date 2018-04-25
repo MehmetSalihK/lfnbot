@@ -338,9 +338,6 @@ bot.on("message", function(message) {
     var args = message.content.substring(PREFIX.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "ping":
-            message.channel.send(`Pong! Time took: ${Date.now() - message.createdTimestamp} ms`).then(d_msg => { d_msg.delete(9999); });
-            break;
         case "info":
             message.reply('ton avatar est '+message.author.avatarURL).then(d_msg => { d_msg.delete(8990); });
             message.reply('ton id est '+message.author.id).then(d_msg => { d_msg.delete(8990); });
