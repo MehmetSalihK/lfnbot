@@ -342,7 +342,9 @@ bot.on("message", function(message) {
             message.channel.sendMessage("Pong!").then(d_msg => { d_msg.delete(30); });
             break;
         case "info":
-            message.channel.sendMessage("Je suis une super drop non créée par moi");
+            message.reply('ton avatar est '+message.author.avatarURL).then(d_msg => { d_msg.delete(8990); });
+            message.reply('ton id est '+message.author.id).then(d_msg => { d_msg.delete(8990); });
+            message.reply('ton pseudo est '+message.author.username).then(d_msg => { d_msg.delete(8990); });
             break;
         case "8ball":
             if (args[1]) message.channel.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
