@@ -339,7 +339,7 @@ bot.on("message", function(message) {
 
     switch (args[0].toLowerCase()) {
         case "ping":
-            message.channel.sendMessage("Pong!").then(d_msg => { d_msg.delete(30); });
+            message.channel.send(`Pong! Time took: ${Date.now() - message.createdTimestamp} ms`).then(d_msg => { d_msg.delete(9999); });
             break;
         case "info":
             message.reply('ton avatar est '+message.author.avatarURL).then(d_msg => { d_msg.delete(8990); });
