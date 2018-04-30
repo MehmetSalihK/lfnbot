@@ -227,6 +227,7 @@ bot.on("message", (message) => {
 			if(message.author.bot === false)
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
+				message.setColor("0x00ffff")
 				message.reply("__***Réseau Sociaux***__ \n\n Youtube : https://goo.gl/RQZ6ZA\nInstagram : https://goo.gl/Jex2aU\nSnapchat : https://goo.gl/c1QtT9\nTwitch : https://goo.gl/yLkmpL\nFacebook Groupe : https://goo.gl/1Co2hL\nDiscord : https://goo.gl/rwu1wK\nTeamSpeak : ndng.ts3wolf.com [NE FONCTION PLUS]").then(d_msg => { d_msg.delete(99999); });
 			}
 		}
