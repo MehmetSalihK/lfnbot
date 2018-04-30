@@ -36,7 +36,7 @@ var servers = {};
 bot.on("ready", async () => {
 
 	console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-	bot.user.setActivity("NDNG - Mehmet60 / -help", {type: "WATCHING"});
+	bot.user.setActivity("NDNG - Mehmet60 || -help", {type: "WATCHING"});
   
 });
 
