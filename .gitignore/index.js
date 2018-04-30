@@ -160,7 +160,7 @@ bot.on("message", (message) => {
 			if(message.author.bot === false)
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("__***Réseau Sociaux***__ \n\n Youtube : https://goo.gl/RQZ6ZA\nInstagram : https://goo.gl/Jex2aU\nSnapchat : https://goo.gl/c1QtT9\nTwitch : https://goo.gl/yLkmpL\nFacebook Groupe : https://goo.gl/1Co2hL\nDiscord : https://goo.gl/rwu1wK\nTeamSpeak : ndng.ts3wolf.com");
+				message.reply("__***Réseau Sociaux***__ \n\n Youtube : https://goo.gl/RQZ6ZA\nInstagram : https://goo.gl/Jex2aU\nSnapchat : https://goo.gl/c1QtT9\nTwitch : https://goo.gl/yLkmpL\nFacebook Groupe : https://goo.gl/1Co2hL\nDiscord : https://goo.gl/rwu1wK\nTeamSpeak : ndng.ts3wolf.com [NE FONCTION PLUS]");
 			}
 		}
 	}
@@ -191,7 +191,7 @@ bot.on("message", (message) => {
 			if(message.author.bot === false)
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("__***Réseau Sociaux***__ \n\n Youtube : https://goo.gl/RQZ6ZA\nInstagram : https://goo.gl/Jex2aU\nSnapchat : https://goo.gl/c1QtT9\nTwitch : https://goo.gl/yLkmpL\nFacebook Groupe : https://goo.gl/1Co2hL\nDiscord : https://goo.gl/rwu1wK\nTeamSpeak : ndng.ts3wolf.com").then(d_msg => { d_msg.delete(8990); });
+				message.reply("__***Réseau Sociaux***__ \n\n Youtube : https://goo.gl/RQZ6ZA\nInstagram : https://goo.gl/Jex2aU\nSnapchat : https://goo.gl/c1QtT9\nTwitch : https://goo.gl/yLkmpL\nFacebook Groupe : https://goo.gl/1Co2hL\nDiscord : https://goo.gl/rwu1wK\nTeamSpeak : ndng.ts3wolf.com [NE FONCTION PLUS]").then(d_msg => { d_msg.delete(8990); });
 			}
 		}
 	}
@@ -203,7 +203,7 @@ bot.on("message", function(message) {
     if (message.content == "Coucou") {
         message.delete (3000);
         message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }
+    }D
 });
 
 bot.on("message", function(message) {
@@ -275,7 +275,7 @@ bot.on("message", (message) => {
 			if(message.author.bot === false)
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits\n9- Si vous voulez partager des vidéos, des photos, clips, ext.. vous pouvez partager les liens vers @#📷clip-video-url-foto || PUBLICITÉ [BAN].");
+				message.reply("__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits\n9- Si vous voulez partager des vidéos, des photos, clips, ext.. vous pouvez partager les liens vers ${@#📷clip-video-url-foto} || PUBLICITÉ [BAN].");
 			}
 		}
 	}
@@ -306,7 +306,7 @@ bot.on("message", (message) => {
 			if(message.author.bot === false)
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits\n9- Si vous voulez partager des vidéos, des photos, clips, ext.. vous pouvez partager les liens vers @#📷clip-video-url-foto || PUBLICITÉ [BAN].").then(d_msg => { d_msg.delete(8990); });
+				message.reply("__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits\n9- Si vous voulez partager des vidéos, des photos, clips, ext.. vous pouvez partager les liens vers ${@#📷clip-video-url-foto} || PUBLICITÉ [BAN].").then(d_msg => { d_msg.delete(8990); });
 			}
 		}
 	}
