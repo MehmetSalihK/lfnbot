@@ -395,7 +395,7 @@ bot.on("message", function(message) {
             var embed = new Discord.RichEmbed()
              .setAuthor(message.guild.name, sicon)
              .setFooter(` Pour la commande d'aide [-aide] • ${day}.${month}.${year} `, "https://imgur.com/rAgsGxu.png")
-             .setColor("#7289DA")
+             .setColor("0x00ffff")
              .setThumbnail(sicon)
              .addField("ID", message.guild.id, true)
              .addField("prénom", message.guild.name, true)
