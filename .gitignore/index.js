@@ -275,7 +275,7 @@ bot.on("message", (message) => {
 			if(message.author.bot === false)
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits\n9- Si vous voulez partager des vidéos, des photos, clips, ext.. vous pouvez partager les liens vers #📷clip-video-url-foto || PUBLICITÉ [BAN].");
+				message.reply(`__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits\n9- Si vous voulez partager des vidéos, des photos, clips, ext.. vous pouvez partager les liens vers` ${#📷clip-video-url-foto} `|| PUBLICITÉ [BAN].`);
 			}
 		}
 	}
