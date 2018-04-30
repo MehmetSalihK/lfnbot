@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
 const YTDL = require("ytdl-core");
-const client = new Discord.Client();
 
-const TOKEN = "NDI5NzQ1ODg4MTUyNTE4Njcx.Da5_fA.GloqYSvp908GXceRGmgfxBqRh64";
+const TOKEN = "NDI5NzQ1ODg4MTUyNTE4Njcx.DcgpyQ.PyViJfV4Jvfq12kwYYl9aTMCo-E";
+const ownerID = "174565176492687361"
 const PREFIX = "-";
 
-function generatoHex() {
-    return "#" + Math.floor(Math.random() * 167777215).toString(16);
+function generateHex() {
+    return "#" + Math.floor(Math.random() * 16777215).toString(16);
 }
 
 function play(connection, message) {
@@ -32,6 +32,103 @@ var fortunes = [
 var bot = new Discord.Client();
 
 var servers = {};
+
+bot.on("ready", async () => {
+
+	console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+	bot.user.setActivity("NDNG - Mehmet60 / -help", {type: "WATCHING"});
+  
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (message.content == "Salut") {
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(30000); });
+    }
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (message.content == "salut") {
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(30000); });
+    }
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (message.content == "Wesh") {
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(30000); });
+    }
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (message.content == "wesh") {
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(30000); });
+    }
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (message.content == "Wsh") {
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(30000); });
+    }
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (message.content == "wsh") {
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(30000); });
+    }
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (message.content == "CC") {
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(30000); });
+    }
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (message.content == "cc") {
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(30000); });
+    }
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (message.content == "welcome") {
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(30000); });
+    }
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (message.content == "Welcome") {
+        message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(30000); });
+    }
+});
 
 const CLEAR_MESSAGES = '-clearchat';
 
@@ -63,8 +160,8 @@ bot.on('ready', () => {
               messagesDeleted = messages.array().length; // number of messages deleted
   
               // Logging the number of messages deleted on both the channel and console.
-              message.channel.sendMessage("Suppression des messages réussie. Nombre total de messages supprimés: "+messagesDeleted).then(d_msg => { d_msg.delete(3000); });
-              console.log('Suppression des messages réussie. Nombre total de messages supprimés: '+messagesDeleted).then(d_msg => { d_msg.delete(3000); });
+              message.channel.sendMessage("Suppression des messages réussie. Nombre total de messages supprimés: "+messagesDeleted).then(d_msg => { d_msg.delete(30000); });
+              console.log('Suppression des messages réussie. Nombre total de messages supprimés: '+messagesDeleted).then(d_msg => { d_msg.delete(30000); });
             })
             .catch(err => {
               console.log('Erreur lors de la suppression en bloc');
@@ -74,67 +171,6 @@ bot.on('ready', () => {
       }
     });
   });
-
-bot.on("ready", async () => {
-
-	console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-	bot.user.setActivity("NDNG - Mehmet60", {type: "WATCHING"});
-  
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "Salut") {
-        message.delete (3000);
-        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "salut") {
-        message.delete (3000);
-        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "Wesh") {
-        message.delete (3000);
-        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "wesh") {
-        message.delete (3000);
-        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "Wsh") {
-        message.delete (3000);
-        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "wsh") {
-        message.delete (3000);
-        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }
-});
 
 bot.on("message", (message) => {
 	
@@ -191,64 +227,10 @@ bot.on("message", (message) => {
 			if(message.author.bot === false)
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("__***Réseau Sociaux***__ \n\n Youtube : https://goo.gl/RQZ6ZA\nInstagram : https://goo.gl/Jex2aU\nSnapchat : https://goo.gl/c1QtT9\nTwitch : https://goo.gl/yLkmpL\nFacebook Groupe : https://goo.gl/1Co2hL\nDiscord : https://goo.gl/rwu1wK\nTeamSpeak : ndng.ts3wolf.com [NE FONCTION PLUS]").then(d_msg => { d_msg.delete(8990); });
+				message.reply("__***Réseau Sociaux***__ \n\n Youtube : https://goo.gl/RQZ6ZA\nInstagram : https://goo.gl/Jex2aU\nSnapchat : https://goo.gl/c1QtT9\nTwitch : https://goo.gl/yLkmpL\nFacebook Groupe : https://goo.gl/1Co2hL\nDiscord : https://goo.gl/rwu1wK\nTeamSpeak : ndng.ts3wolf.com [NE FONCTION PLUS]").then(d_msg => { d_msg.delete(99999); });
 			}
 		}
 	}
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "Coucou") {
-        message.delete (3000);
-        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }D
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "coucou") {
-        message.delete (3000);
-        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "CC") {
-        message.delete (3000);
-        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "cc") {
-        message.delete (3000);
-        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "welcome") {
-        message.delete (3000);
-        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "Welcome") {
-        message.delete (3000);
-        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
-    }
 });
 
 bot.on("message", (message) => {
@@ -275,7 +257,7 @@ bot.on("message", (message) => {
 			if(message.author.bot === false)
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits.");
+				message.reply("__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits.\n9. Si vous voulez partager des chansons, vidéos, photo, liens, ext... vous pouvez partager les liens vers #📷clip-video-url-foto || PUBLICITÉ BAN!");
 			}
 		}
 	}
@@ -306,24 +288,20 @@ bot.on("message", (message) => {
 			if(message.author.bot === false)
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits.").then(d_msg => { d_msg.delete(8990); });
+				message.reply("__***:x:INTERDIT:x:***__ \n\n 1. Moins la malédiction, plus nous sommes heureux.\n2.Faites vos repères en particulier.\n3.Faites vos repères en particulier.\n4. Toute annonce de chaîne ou de discord est interdit.\n5. Le partage sexuel, de sang, de sauvagerie est interdit.\n6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits.\n7. La religion, la langue, la race et la politique sont strictement interdites.\n8. Les spams et les inondations sont interdits.\n9. Si vous voulez partager des chansons, vidéos, photo, liens, ext... vous pouvez partager les liens vers #📷clip-video-url-foto || PUBLICITÉ BAN!").then(d_msg => { d_msg.delete(99999); });
 			}
 		}
 	}
 });
 
-bot.on("ready", function() {
-    console.log("Ready");
-});
-
 bot.on("guildMemberAdd", function(member) {
     member.guild.channels.find("name", "general").sendMessage(member.toString() + " WELCOME!");
 
-    member.addRole(member.guild.roles.find("name", "!"));
+    member.addRole(member.guild.roles.find("name", "NewDayNewGame"));
 
-    member.guild.createRolle({
+    member.guild.createRole({
         name: member.user.username,
-        color: generatoHex(),
+        color: generateHex(),
         permissions: []
     }).then(function(role) {
         member.addRole(role);
@@ -347,7 +325,7 @@ bot.on("message", function(message) {
             if (args[1]) message.channel.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
             else message.channel.sendMessage("Je ne peux pas lire ça");
             break;
-        case "embed":
+         case "embed":
             var embed = new Discord.RichEmbed()
                 .addField("Test Title", "Test Description", true)
                 .addField("Test Titl2e", "Test De2scription", true)
@@ -364,10 +342,10 @@ bot.on("message", function(message) {
             break;
         case "removerole":
             message.channel.sendMessage("removed");
-            message.member.removeRole(message.member.guild.roles.find("name", "!"));
+            message.member.removeRole(message.member.guild.roles.find("name", "NewDayNewGame"));
             break;
         case "deleterole":
-            message.member.guild.roles.find("name", "!").delete();
+            message.member.guild.roles.find("name", "NewDayNewGame").delete();
             message.channel.sendMessage("delet");
             break;
         case "play":
@@ -403,7 +381,7 @@ bot.on("message", function(message) {
             break;
         default:
             message.channel.sendMessage(" ")
-    }
-});
-    
+        }
+    });
+
 bot.login(TOKEN);
