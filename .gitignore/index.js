@@ -337,6 +337,29 @@ bot.on("message", function(message) {
                 .setThumbnail(message.author.avatarURL)
             message.channel.sendMessage(embed);
             break;
+        case "serveurinfo":
+            var online = message.guild.members.filter(member => member.user.presence.status !== 'offline');
+            var day = message.guild.createdAt.getDate()
+            var month = 1 + message.guild.createdAt.getMonth()
+            var year = message.guild.createdAt.getFullYear()
+            var sicon = message.guild.iconURL;
+            var embed = new Discord.RichEmbed()
+             .setAuthor(message.guild.name, sicon)
+             .setFooter(` Pour la commande d'aide [-aide] • ${day}.${month}.${year} `, "https://imgur.com/rAgsGxu.png")
+             .setColor("#7289DA")
+             .setThumbnail(sicon)
+             .addField("ID", message.guild.id, true)
+             .addField("prénom", message.guild.name, true)
+             .addField("Owner", message.guild.owner.user.tag, true)
+             .addField("Région", message.guild.region, true)
+             .addField("Chaînes", message.guild.channels.size, true)
+             .addField("Membres", message.guild.memberCount, true)
+             .addField("Humains", message.guild.memberCount - message.guild.members.filter(m => m.user.bot).size, true)
+             .addField("Bots", message.guild.members.filter(m => m.user.bot).size, true)
+             .addField("En ligne", online.size, true)
+             .addField("Les rôles", message.guild.roles.size, true);
+            message.channel.sendMessage(embed);
+            break;
         case "noticeme":
             message.channel.sendMessage(message.author.toString() + " sadasaasdsdaasd");
             break;
