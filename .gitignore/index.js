@@ -36,7 +36,7 @@ var servers = {};
 bot.on("ready", async () => {
 
 	console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-	bot.user.setActivity("NDNG - Mehmet60 || -help", {type: "WATCHING"});
+	bot.user.setActivity("NDNG - Mehmet60 / -help", {type: "WATCHING"});
   
 });
 
@@ -294,6 +294,54 @@ bot.on("message", (message) => {
 	}
 });
 
+const agree = "<:yes:439323501569114112>";
+const disagree = "<:yes:439323501569114112>";
+
+module.exports.run = async (bot, message, args) => {
+    
+    let msg = await message.channel.send("Vote!");
+    await msg.react(agree);
+    await msg.react(disagree);
+
+    const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === agree || reaction.emoji.name === disagree, {time: 15000});
+    message.channel.send(`Voting complete! \n\n${agree}: ${reactions.get(agree).count-1}\n${disagree}: ${reactions.get(disagree).count-1}`);
+}
+
+module.exports.help = {
+    name: "await"
+}
+
+exports.run = async (bot, message, args) => {
+  if (!args) return message.reply("You must have something to vote for!")
+  if (!message.content.includes("?")) return message.reply("Include a ? in your vote!")
+    message.channel.send(`:ballot_box:  ${message.author.username} started a vote! React to my next message to vote on it. :ballot_box: `);
+    const pollTopic = await message.channel.send(`${args}`);
+    pollTopic.react(`✅`);
+    pollTopic.react(`⛔`);
+};
+
+module.exports.help = {
+    name: "await"
+}
+
+exports.run = async (bot, message, args) => {
+    if (!args) return message.reply("You must have something to vote for!")
+    if (!message.content.includes("?")) return message.reply("Include a ? in your vote!")
+        message.channel.send(`:ballot_box:  ${message.author.username} started a vote! React to my next message to vote on it. :ballot_box: `);
+        const pollTopic = await message.channel.send(message.content.slice(2));
+        await pollTopic.react(`✅`);
+        await pollTopic.react(`⛔`);
+        // Create a reaction collector
+        const filter = (reaction) => reaction.emoji.name === '✅';
+        const collector = pollTopic.createReactionCollector(filter, { time: 15000 });
+        collector.on('collect', r => console.log(`Collected ${r.emoji.name}`));
+        collector.on('end', collected => console.log(`Collected ${collected.size} items`));
+}
+
+module.exports.help = {
+    name: "await"
+}
+
 bot.on("guildMemberAdd", function(member) {
     member.guild.channels.find("name", "general").sendMessage(member.toString() + " WELCOME!");
 
@@ -360,6 +408,7 @@ bot.on("message", function(message) {
              .addField("Les rôles", message.guild.roles.size, true);
             message.channel.sendMessage(embed);
             break;
+        
         case "noticeme":
             message.channel.sendMessage(message.author.toString() + " sadasaasdsdaasd");
             break;
