@@ -386,6 +386,7 @@ bot.on("message", function(message) {
             message.channel.sendMessage(embed);
             break;
         case "serveurinfo":
+               message.delete (30);
             var online = message.guild.members.filter(member => member.user.presence.status !== 'offline');
             var day = message.guild.createdAt.getDate()
             var month = 1 + message.guild.createdAt.getMonth()
