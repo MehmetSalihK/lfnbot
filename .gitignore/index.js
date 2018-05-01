@@ -400,8 +400,7 @@ bot.on("message", function(message) {
     .addField("__```LfNBoT:```__",
     "https://goo.gl/gSGYa3")
     .addField("__```TeamSpeak:```__",
-    "lfn-ndng.clants3.net",
-    "ndng.ts3wolf.com [NE FONCTION PLUS]")
+    "lfn-ndng.clants3.net")
          message.channel.sendMessage(embed).then(d_msg => { d_msg.delete(8990); });
          break;
     case "publicitéadmin":
@@ -430,8 +429,7 @@ bot.on("message", function(message) {
  .addField("__```LfNBoT:```__",
  "https://goo.gl/gSGYa3")
  .addField("__```TeamSpeak:```__",
- "lfn-ndng.clants3.net",
- "ndng.ts3wolf.com [NE FONCTION PLUS]")
+ "lfn-ndng.clants3.net")
       message.channel.sendMessage(embed);
       break;
         case "serveurinfo":
