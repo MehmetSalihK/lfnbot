@@ -175,7 +175,7 @@ bot.on('ready', () => {
 bot.on("guildMemberAdd", function(member) {
     member.guild.channels.find("name", "general").sendMessage(member.toString() + " WELCOME!");
 
-    member.addRole(member.guild.roles.find("name", "NewDayNewGame"));
+    member.addRole(member.guild.roles.find("name", "〰️ KEJNE 〰️"));
 
     member.guild.createRole({
         name: member.user.username,
