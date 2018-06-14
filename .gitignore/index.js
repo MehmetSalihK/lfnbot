@@ -275,6 +275,7 @@ bot.on("message", function(message) {
 		.setColor(0x00ffff)
 		.setTitle("Liste de commandes:")
 		.addField("Donnera la liste de commande actuelle", "-help")
+      .addField("Si vous avez besoin d'un admin ou moderateur", "-admin")
 		.addField("Voire tu a combien de ping pour le bot", "-ping")
 		.addField("Voire les régles de ce serveur", "-regle")
 		.addField("Voire les réseaux sociaux", "-pub")
@@ -300,6 +301,7 @@ bot.on("message", function(message) {
       .setColor(0x00ffff)
       .setTitle("Liste de commandes: ADMIN")
       .addField("Donnera la liste de commande actuelle", "-help")
+      .addField("Si vous avez besoin d'un admin ou moderateur", "-admin")
       .addField("Voire tu a combien de ping pour le bot", "-ping")
       .addField("Voire les régles de ce serveur", "-regle")
       .addField("Voire les réseaux sociaux", "-pub")
@@ -324,8 +326,8 @@ bot.on("message", function(message) {
       .setAuthor(message.guild.name, sicon)
       .setFooter(` Pour la commande d'aide [-aide] • ${day}.${month}.${year} `, "https://imgur.com/rAgsGxu.png")
        .setColor(0x00ffff)
- .addField("__```Voila les personnes que tu peut contacter```__", "<@174565176492687361> <@309388501965602816> <@379655336954691594> <@214033624595431425> <@441428711212974091> <@279611503257059329> <@264468391010631682>", true);
-      message.channel.sendMessage(embed).then(d_msg => { d_msg.delete(8990); });
+ .addField("__```Voila les personnes que tu peut contacter:```__", "<@174565176492687361> <@309388501965602816> <@379655336954691594> <@214033624595431425> <@441428711212974091> <@279611503257059329> <@264468391010631682>", true);
+      message.channel.sendMessage(embed).then(d_msg => { d_msg.delete(8999999); });
       break;
             case "pub":
             message.delete (30);
