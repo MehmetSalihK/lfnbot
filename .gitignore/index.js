@@ -313,6 +313,20 @@ bot.on("message", function(message) {
       .addField("Va faire dire au bot une annonce et taguer tout le monde (ADMIN)", "-announcement [text]");
       message.channel.send({embed}).then(d_msg => { d_msg.delete(9999); });
       break;
+		case "admin":
+         message.delete (30);
+      var online = message.guild.members.filter(member => member.user.presence.status !== 'offline');
+      var day = message.guild.createdAt.getDate()
+      var month = 1 + message.guild.createdAt.getMonth()
+      var year = message.guild.createdAt.getFullYear()
+      var sicon = message.guild.iconURL;
+      var embed = new Discord.RichEmbed()
+      .setAuthor(message.guild.name, sicon)
+      .setFooter(` Pour la commande d'aide [-aide] • ${day}.${month}.${year} `, "https://imgur.com/rAgsGxu.png")
+       .setColor(0x00ffff)
+ .addField("__```Voila les personnes que tu peut contacter```__", "<@174565176492687361> <@309388501965602816> <@379655336954691594> <@214033624595431425> <@441428711212974091> <@279611503257059329> <@264468391010631682>", true);
+      message.channel.sendMessage(embed).then(d_msg => { d_msg.delete(8990); });
+      break;
             case "pub":
             message.delete (30);
          var online = message.guild.members.filter(member => member.user.presence.status !== 'offline');
