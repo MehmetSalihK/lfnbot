@@ -1,8 +1,15 @@
-const Discord = require("discord.js");
+"use strict";
+
+const Discord = require('discord.js');
+const config = require('./config.json');
+const disco = new Discord.Client();
+const prefix = config.prefix;
+const allowedUsers = config.allowedUsers;
+const roles = config.roleToDisco;
 const client = new Discord.Client();
 const YTDL = require("ytdl-core");
 
-const TOKEN = "NDU2NTkyMDkwMDcyMDg4NTk4.DgMyIw.3BMj4oqfzRnNDaKSCbI-fDP-VXI";
+const TOKEN = "NDU2NTkyMDkwMDcyMDg4NTk4.DhEyjQ.4OCMjppJTxxpBCjMmT9JiD-0eUY";
 const ownerID = "174565176492687361"
 const PREFIX = "-";
 
@@ -36,6 +43,7 @@ var servers = {};
 
 bot.on("ready", async () => {
 
+	bot.user.setUsername("LfNBoT");
 	console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 	bot.user.setActivity("NDNG - Mehmet60 || -help", {type: "WATCHING"});
   
@@ -855,5 +863,41 @@ bot.on('guildMemberAdd', member => {
             }
         }
     });
+
+disco.on("message", message => {
+    
+      function discoRole() {
+        let random = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+        roles.forEach((role) => {
+          let theRole = message.guild.roles.find("name", role);
+          theRole.edit({color: random}).catch(e => {
+            return message.channel.sendMessage(":x: **Error:** Veuiller vérifier `config.json` car votre rôle n'est pas modifier.");
+          });
+        });
+      }
+    
+      if(message.content.startsWith(prefix + "startdisco")) {
+        if(allowedUsers.includes(message.author.id)) {
+        setInterval(() => { discoRole(); }, config.ms);
+        message.channel.sendMessage("```css\nDisco!...```");
+        message.channel.sendMessage(" ");
+      } else {
+        message.reply(` `);
+      }
+    } else
+    
+    if(message.content.startsWith(prefix + "stopdisco")) {
+      if(allowedUsers.includes(message.author.id)) {
+      message.channel.sendMessage("Disco términer.");
+      setTimeout(() => { console.log(process.exit(0)); }, 300);
+    } else {
+      message.reply(` `);
+      }
+    }
+    
+    });
+
+    disco.login(config.token);
+disco.login(config.token);
 
 bot.login(TOKEN);
