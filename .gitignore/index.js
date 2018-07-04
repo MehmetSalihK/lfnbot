@@ -9,7 +9,7 @@ const roles = config.roleToDisco;
 const client = new Discord.Client();
 const YTDL = require("ytdl-core");
 
-const TOKEN = "";
+const TOKEN = "NDU2NTkyMDkwMDcyMDg4NTk4.Dh4Zzg.GPSceJGKSrxwwTupg9CQtJvbcXg";
 const ownerID = "174565176492687361"
 const PREFIX = "-";
 
